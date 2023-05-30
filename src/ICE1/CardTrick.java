@@ -107,6 +107,25 @@ for(int i = 0;i<magicHand.length; i++){
        if(ans==1) System.out.println("Oh yeah, You Won\n ");
        else System.out.println("Oops No Match, Try again\n");
         sc.close();
+     /** hardcod add
+     */
+     Card c = new Card();
+        c.setValue(7);
+        c.setSuit("Hearts");
+        int ans2=0;
+          for(int i=0; i<magicHand.length;i++)
+        {
+            if((magicHand[i].getValue()==c.getValue()) && (magicHand[i].getSuit().equals(c.getSuit()))){
+                ans2 = 1;
+                break;
+            }
+                
+        }
+        
+        System.out.println("Lucky Card:\n\t Value = "+ c.getValue() + "\n\tSuit = "+ c.getSuit()+"\n");
+        System.out.print("Did the Lucky Card Match : \t");
+        if(ans2==1) System.out.println("Yes\n");
+        else System.out.println("No\n");
     }    
 }
 
